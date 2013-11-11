@@ -57,13 +57,4 @@ Sample code to Start up
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 		
-		
-		Customization is allowed as like below
-		
-		1. DropDownList source inherits UITableViewSource, so any developer can customize the source and modify the look and feel as they like
-		2. Any developer can modify the Handle Image by using the code dropdownlist. Usage:dropDownList.HandleImage = UIImage.FromBundle ("your image file path");
-		3. Direction of the drop down can be set to up or down Usage: dropDownList.DropDownDirection = DropDownDirectionValue.Down;
-		4. Size of DropDownList can be set via constructor or empty constructor default to 0,0, 200,75
-		5. Total visible rows in the drop down can be controlled using VisibleRows property. Usage: dropDownList.VisibleRows = 10;
-		
-		
+
