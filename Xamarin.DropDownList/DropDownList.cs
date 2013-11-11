@@ -205,7 +205,6 @@ namespace Xamarin.DropDownList
 			handleImageContainer.AddGestureRecognizer (singleTap);
 
 
-			handleImageContainer.BackgroundColor = UIColor.Red;
 
 
 			tblDataView = new UITableView (new RectangleF (0, handleImage.Size.Height, base.Frame.Width, visibleRows * 25));
