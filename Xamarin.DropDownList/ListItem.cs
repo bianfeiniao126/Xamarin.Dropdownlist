@@ -3,6 +3,9 @@ using MonoTouch.UIKit;
 
 namespace Xamarin.DropDownList
 {
+	/// <summary>
+	/// List item.
+	/// </summary>
 	public class ListItem
 	{
 		public ListItem ()
