@@ -121,6 +121,7 @@ namespace Xamarin.DropDownList
 			                                             txtData.ContentSize.Height);
 			handleImageContainer.ContentMode = UIViewContentMode.Center;
 			handleImageContainer.ClipsToBounds = true;
+			handleImageContainer.BackgroundColor = UIColor.Gray;
 		}
 		public DropDownList ():base()
 		{
