@@ -51,9 +51,9 @@ namespace sample.dropdownlist
 			this.View.AddSubview (lab1);
 
 			//DropDownList<ListItem> dropDownList = new DropDownList<ListItem>(new System.Drawing.RectangleF (25,325,150,40));
-			DropDownList<ListItem> dropDownList = new DropDownList<ListItem> ();//(new System.Drawing.RectangleF (25,325,150,40));
+			DropDownList<ListItem> dropDownList = new DropDownList<ListItem> ();//(new System.Drawing.RectangleF (25,125,150,40));
 			dropDownList.Source = source;
-			dropDownList.HandleImage = UIImage.FromBundle ("");
+			//dropDownList.HandleImage = UIImage.FromBundle ("");
 			dropDownList.DropDownDirection = DropDownDirectionValue.Down; //Default direction
 			//dropDownList.DropDownDirection = DropDownDirectionValue.Up;
 
@@ -61,7 +61,7 @@ namespace sample.dropdownlist
 			//dropDownList.VisibleRows = 2;
 
 			//If default font size modified, then need to set an image with matching height, dropdownlist has to intansitated with frame value
-			dropDownList.TextLabelFontSize = 15.0f;
+			//dropDownList.TextLabelFontSize = 15.0f;
 			this.View.AddSubview (dropDownList);
 
 

@@ -105,6 +105,7 @@ namespace Xamarin.DropDownList
 				                                txtData.Frame.Y,
 				                                txtData.Frame.Width,
 				                                txtData.ContentSize.Height);
+				FitImage ();
 
 
 			}
