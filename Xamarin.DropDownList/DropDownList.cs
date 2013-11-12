@@ -42,7 +42,7 @@ namespace Xamarin.DropDownList
 			}
 		}
 
-		public DropDownListSource<T> source = null;
+		DropDownListSource<T> source = null;
 
 		public DropDownListSource<T> Source {
 			get {
