@@ -151,13 +151,13 @@ namespace Xamarin.DropDownList
 
 		public virtual void SetupView ()
 		{
+			//this.BackgroundColor = UIColor.Gray;
 
-			this.BackgroundColor = UIColor.Gray;
 			if (handleImage == null) {
 				handleImage = UIImage.FromBundle ("24");
 			}
 
-	
+
 
 			if (txtData == null) {
 				txtData = new UITextView ();
@@ -190,7 +190,7 @@ namespace Xamarin.DropDownList
 
 			txtData.BackgroundColor = UIColor.LightGray;
 
-			handleImageContainer = new UIImageView (new RectangleF (txtData.Frame.Width , 0, handleImage.Size.Width, defaultHeight));
+			handleImageContainer = new UIImageView (new RectangleF (txtData.Frame.Width, 0, handleImage.Size.Width, defaultHeight));
 			handleImageContainer.Image = handleImage;
 			handleImageContainer.UserInteractionEnabled = true;
 
@@ -202,10 +202,13 @@ namespace Xamarin.DropDownList
 			singleTap.NumberOfTapsRequired = 1;
 			singleTap.NumberOfTouchesRequired = 1;
 
-			this.AddSubview (txtData);
-			this.AddSubview (handleImageContainer);
-			handleImageContainer.AddGestureRecognizer (singleTap);
+			UIView topViewContainer = new UIView (new RectangleF(0,0,txtData.Frame.Width+handleImageContainer.Frame.Width, txtData.Frame.Height));
+			topViewContainer.BackgroundColor = UIColor.Gray;
 
+			topViewContainer.AddSubview (txtData);
+			topViewContainer.AddSubview (handleImageContainer);
+			handleImageContainer.AddGestureRecognizer (singleTap);
+			this.AddSubview (topViewContainer);
 
 
 
@@ -217,7 +220,6 @@ namespace Xamarin.DropDownList
 
 
 		}
-
 		public void Redraw ()
 		{
 			SetupView ();
