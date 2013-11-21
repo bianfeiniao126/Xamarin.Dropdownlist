@@ -51,7 +51,7 @@ namespace sample.dropdownlist
 			this.View.AddSubview (lab1);
 
 			//DropDownList<ListItem> dropDownList = new DropDownList<ListItem>(new System.Drawing.RectangleF (25,325,150,40));
-			DropDownList<ListItem> dropDownList = new DropDownList<ListItem> (new System.Drawing.RectangleF (25,125,150,40));
+			DropDownList<ListItem> dropDownList = new DropDownList<ListItem> (new System.Drawing.RectangleF (25,125,150,125));
 			dropDownList.Source = source;
 			//dropDownList.HandleImage = UIImage.FromBundle ("");
 			dropDownList.DropDownDirection = DropDownDirectionValue.Down; //Default direction
