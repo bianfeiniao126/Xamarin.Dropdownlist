@@ -149,10 +149,16 @@ namespace Xamarin.DropDownList
 			SetupView ();
 		}
 
+		public override void MovedToSuperview ()
+		{
+			base.MovedToSuperview ();
+
+		}
 		public virtual void SetupView ()
 		{
 			//this.BackgroundColor = UIColor.Gray;
 
+			txtData.UserInteractionEnabled = false;
 			if (handleImage == null) {
 				handleImage = UIImage.FromBundle ("24");
 			}
@@ -220,6 +226,7 @@ namespace Xamarin.DropDownList
 
 
 		}
+
 		public void Redraw ()
 		{
 			SetupView ();
@@ -264,6 +271,7 @@ namespace Xamarin.DropDownList
 				tblDataView.Hidden = false;
 				UIView.Animate (0.25, delegate() {
 					if (dropDownDirection == DropDownDirectionValue.Down) {
+						base.Superview.Frame = new RectangleF (base.Superview.Frame.X, base.Superview.Frame.Y, base.Superview.Frame.Width, base.Superview.Frame.Height + tableViewHeight + 0.5f);
 						base.Frame = new RectangleF (base.Frame.X - 0.5f, base.Frame.Y, base.Frame.Width + 1, defaultHeight + tableViewHeight + 0.5f);
 						tableView.Frame = new RectangleF (tableView.Frame.X,txtData.Frame.Y + txtData.Frame.Height, tableView.Frame.Width, tableViewHeight);
 					} else if (dropDownDirection == DropDownDirectionValue.Up) {
@@ -277,6 +285,7 @@ namespace Xamarin.DropDownList
 			} else {
 				UIView.Animate (0.25, delegate() {
 					if (dropDownDirection == DropDownDirectionValue.Down) {
+						base.Superview.Frame = new RectangleF (base.Superview.Frame.X, base.Superview.Frame.Y, base.Superview.Frame.Width, base.Superview.Frame.Height - tableViewHeight - 0.5f);
 						base.Frame = new RectangleF (base.Frame.X + 0.5f, base.Frame.Y, base.Frame.Width - 1, defaultHeight - 0.5f);
 						tableView.Frame = new RectangleF (tableView.Frame.X, txtData.Frame.Y + txtData.Frame.Height, tableView.Frame.Width, defaultHeight);
 					}
